@@ -1,16 +1,10 @@
 #pragma once
 typedef struct Player{
-    // only 1 & 2
-    int playerName;
-
-    // 0~100 convert to percentage
-    int hp;
-
-    // the tag of skill
-    int* skills;
-    // the num of skill player has
-    int skillNum;
-
+    int playerName;     // only 1 & 2
+    int hp;             // 0~100 convert to percentage
+    int* skills;        // the tag of skill
+    int skillNum;       // the num of skill player has
+    int selectSkill;    // the select skill, if -1 means no skill setected
 } Player;
 
 typedef struct InfoMove{
@@ -46,3 +40,6 @@ void refresh(Info info, int cnt);
 
 void draw_move(InfoMove infoMove);
 void draw_effect(InfoEffect infoEffect);
+
+void draw_image(int image_id, int x, int y);
+void clear_screen();

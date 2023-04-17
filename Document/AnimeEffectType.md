@@ -53,10 +53,11 @@
 
 ```c
 typedef struct Player{
-    int playerName;	//玩家编号 1或2
-    int hp;			//玩家百分比血量，传入时为0~100
-    int* skills;	//玩家拥有的技能的数组，存储的为技能的编号
-    int skillNum;	//技能数组的大小
+    int playerName;     //玩家编号 1或2
+    int hp;             //玩家百分比血量，传入时为0~100
+    int* skills;        //玩家拥有的技能的数组，存储的为技能的编号
+    int skillNum;       //技能数组的大小
+    int selectSkill;    //玩家选择的技能,-1表示未选中技能
 } Player;
 ```
 
@@ -110,9 +111,9 @@ typedef struct Player{
 
 ```c
 typedef struct InfoEffect{
-    int tag;	//素材编号
-    int x;		//x坐标
-    int y;		//y坐标
+    int tag;    //素材编号
+    int x;      //x坐标
+    int y;      //y坐标
 }InfoEffect;
 ```
 
@@ -139,11 +140,11 @@ typedef struct InfoEffect{
 
 ```c
 typedef struct InfoMove{
-    int tag;		//素材标号
-    int x_start;	//初始x位置
-    int y_start;	//初始y位置
-    int x_dest;		//末了x位置
-    int y_dest;		//末了y位置	
+    int tag;        //素材标号
+    int x_start;    //初始x位置
+    int y_start;    //初始y位置
+    int x_dest;     //末了x位置
+    int y_dest;     //末了y位置	
 }InfoMove;
 ```
 
@@ -156,15 +157,15 @@ typedef struct InfoMove{
 下面我将给出一个调用示例：
 
 ```c
-new Info = init_draw();							//创建一个全局唯一的信息指针
+new Info = init_draw();                         //创建一个全局唯一的信息指针
 ……
 // begin draw
-import_info(infoM, lengthM, infoE, lengthE);	//导入输入
+import_info(infoM, lengthM, infoE, lengthE);    //导入输入
 for(10){
-    renew_backgrounds(obstacles, length);		//绘制基础背景
-    refresh(info, cnt)							//绘制游戏过程中的场景
+    renew_backgrounds(obstacles, length);       //绘制基础背景
+    refresh(info, cnt)                          //绘制游戏过程中的场景
 }
-renew_status(players);							//绘制玩家状态栏
+renew_status(players);                          //绘制玩家状态栏
 // end draw
 ```
 

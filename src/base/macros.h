@@ -22,6 +22,9 @@
 #define SCREEN_MAX_X = 640
 #define SCREEN_MAX_y = 480
 
+#define MAP_BEGIN_X = 0
+#define MAP_BEGIN_Y = 96
+
 #define ANIME_INFO_MOVE_MAX_LENGTH 1000
 #define ANIME_INFO_EFFECT_MAX_LENGTH 1000
 

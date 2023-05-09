@@ -1,4 +1,5 @@
 #pragma once
+#define REFRESH_CNT 8
 typedef struct Player{
     int playerName;     // only 1 & 2
     int hp;             // 0~100 convert to percentage
@@ -38,8 +39,5 @@ void renew_status(Player players[2]);
 void import_info(Info *info,InfoMove *infomove, int lengthMove, InfoEffect *infoeffect, int lengthEffect);
 void refresh(Info info, int cnt);
 
-void draw_move(InfoMove infoMove);
+void draw_move(InfoMove infoMove, int time);
 void draw_effect(InfoEffect infoEffect);
-
-void draw_image(int image_id, int x, int y);
-void clear_screen();

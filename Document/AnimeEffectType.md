@@ -19,7 +19,7 @@
 
 
 
-## 2. 更新背景
+## 2. 更新背景(已废弃)
 
 **接口：**`void renew_backgrounds(int **obstacles, int length);`
 
@@ -162,7 +162,6 @@ new Info = init_draw();                         //创建一个全局唯一的信
 // begin draw
 import_info(infoM, lengthM, infoE, lengthE);    //导入输入
 for(10){
-    renew_backgrounds(obstacles, length);       //绘制基础背景
     refresh(info, cnt)                          //绘制游戏过程中的场景
 }
 renew_status(players);                          //绘制玩家状态栏
@@ -176,5 +175,6 @@ renew_status(players);                          //绘制玩家状态栏
 1. 最先被调用的一定为`import_info`
 2. 循环次数应当从0开始完整经过一段循环，不应该中途退出
 3. 所有传入的坐标应该以(0,120)作为坐标起点，不可超出该范围
+4. 如有清屏需求可使用`clear_screen()`进行清屏
 
-**注意：永远不要调用除了以上五个函数之外的函数**
+**注意：在游戏运行过程中永远不要调用除了以上函数之外的函数**

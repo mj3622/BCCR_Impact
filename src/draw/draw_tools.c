@@ -1,6 +1,6 @@
 #include "draw_tools.h"
 #include "xil_para.h"
-// #include "xil_io.h"
+#include "xil_io.h"
 #include "..\sources\img_list.h"
 unsigned int color, addr;
 unsigned char *img16;

@@ -232,3 +232,27 @@ void draw_players_info(Player *players)
     pre_players[0].skillNum = p1.skillNum;
     pre_players[1].skillNum = p2.skillNum;
 }
+void draw_main_page()
+{
+    clear_screen();
+    for (int i = 0; i < 480; i++)
+        for (int j = 0; j < 640 + 16; j++)
+        {
+            int addr = (unsigned int)img_list_8[1] + (i * 640 + j) * 4;
+            int color = Xil_In32(addr);
+            Xil_Out32(TFT_FRAME_ADDR0 + (4 * (i * 1024 + j)), color);
+        }
+}
+void draw_gameover(int player)
+{
+    unsigned char *img;
+    img = img_list_8[player == 1 ? 2 : 3];
+
+    for (int i = 170; i < 470; i++)
+        for (int j = 90; j < 390; j++)
+        {
+            int addr = (unsigned int)img[1] + (i * 300 + j) * 4;
+            int color = Xil_In32(addr);
+            Xil_Out32(TFT_FRAME_ADDR0 + (4 * (i * 1024 + j)), color);
+        }
+}

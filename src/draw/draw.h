@@ -46,5 +46,3 @@ void refresh(Info info, int cnt);
 void draw_move(InfoMove infoMove, int time);
 void draw_effect(InfoEffect infoEffect);
 
-void draw_main_page();
-void draw_gameover(int player);

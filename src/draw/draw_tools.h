@@ -20,3 +20,6 @@ void clear_img(int type, int x, int y);
 
 void draw_bsaic_status();
 void draw_players_info(Player *players);
+
+void draw_main_page();
+void draw_gameover(int player);

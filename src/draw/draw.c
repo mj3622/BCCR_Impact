@@ -17,7 +17,7 @@ Info *init_draw()
     pre_info.lengthMove = 0;
 
     Player p1 = {1, 0, NULL, 0, 0};
-    Player p2 = {1, 0, NULL, 0, 0};
+    Player p2 = {2, 0, NULL, 0, 0};
     pre_players[0] = p1;
     pre_players[1] = p2;
 

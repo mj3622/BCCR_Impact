@@ -2,6 +2,7 @@
     "files.associations": {
         "img_list.h": "c",
         "309.h": "c",
-        "308.h": "c"
+        "308.h": "c",
+        "draw.h": "c"
     }
 }
